@@ -1,9 +1,9 @@
 const express = require("express")
-
+const env =require('dotenv')
 const path= require("path")
 const exp =express();
-
-port= process.env.PORT||4001;
+env.config()
+port= process.env.PORT;
 exp.get('/',(req,res)=>{
 
     res.status(200).send("Working")
