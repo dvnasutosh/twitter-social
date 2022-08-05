@@ -1,9 +1,9 @@
 const express = require("express")
-const env=require('dotenv')
+
 const path= require("path")
 const exp =express();
-env.config()
 
+port= process.env.PORT||4001;
 exp.get('/',(req,res)=>{
 
     res.status(200).send("Working")
@@ -51,6 +51,6 @@ exp.get("/api/v1/tweet/retweets",(req,res)=>{
 
 
 
-exp.listen(PROCESS.ENV.PORT,()=>{
-    console.log(`server is running on port ${process.env.PORT}`)
+exp.listen(port,()=>{
+    console.log(`server is running on port ${port}`)
 })
