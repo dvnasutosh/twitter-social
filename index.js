@@ -51,6 +51,6 @@ git
 
 
 
-exp.listen(process.env.PORT,()=>{
+exp.listen(PROCESS.ENV.PORT,()=>{
     console.log(`server is running on port ${process.env.PORT}`)
 })
