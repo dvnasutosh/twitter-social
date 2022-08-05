@@ -11,7 +11,7 @@ exp.get('/',(req,res)=>{
 /**
  * Experiment to send html file
  */
-exp.get('/help',(req,res)=>{
+exp.get('/',(req,res)=>{
 
     res.status(200).sendFile(`ind.html`,{
         root: path.join(__dirname)
